@@ -1,0 +1,7 @@
+com\sparta\da\Manager\Starter.class
+com\sparta\da\Manager\SortManager.class
+com\sparta\da\Display\DisplayManager.class
+com\sparta\da\Sorters\BubbleSort.class
+com\sparta\da\Manager\SortFactory.class
+com\sparta\da\Sorters\MergeSorter.class
+com\sparta\da\Sorters\Sorter.class

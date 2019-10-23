@@ -8,28 +8,30 @@ public class MergeSorter implements Sorter {
 
 
     @Override
-    public int[] getSortingArray(int[] arrayToSort) {
-        int arraySize = arrayToSort.length;
-        int index;
-        int[] leftSide = new int[arraySize / 2];
-        int[] rightSide = new int[arraySize - leftSide.length];
-        int[] collection = new int[0];
-
-        if (leftSide.length == 1 && rightSide.length == 1) {
-            collection = mergeArray(leftSide, rightSide);
-        }
-
-        leftSide = Arrays.copyOfRange(arrayToSort, 0, leftSide.length);
-        rightSide = Arrays.copyOfRange(arrayToSort, rightSide.length, arrayToSort.length);
-
-//        for (index = 0; index  )
-        if(leftSide.length != 1 && rightSide.length != 1){
-            getSortingArray(leftSide);
-            getSortingArray(rightSide);
-        }
-
-        return collection;
+    public int[] getSortingArray(int[] unsortedArray) {
+        sortedArray(unsortedArray);
+        return unsortedArray;
     }
+    public void sortedArray(int[] unsortedArray){
+        if (unsortedArray.length < 2) {
+            return;
+        }
+        int arraySize = unsortedArray.length;
+        int midPoint = arraySize/2;
+        int[] leftSide = populateSplitArray(midPoint, 0, unsortedArray);
+        int[] rightSide = populateSplitArray(arraySize-midPoint, midPoint, unsortedArray);
+
+        sortedArray(leftSide);
+        sortedArray(rightSide);
+
+        int [] combineArray = mergeArray(leftSide, rightSide);
+        System.arraycopy(combineArray,0,unsortedArray,0,combineArray.length);
+    }
+    private int[] populateSplitArray(int length, int startIndex, int[] inputArray){
+        int[] splitArray = new int[length];
+        System.arraycopy(inputArray, startIndex, splitArray,0,length);
+        return splitArray;
+}
 
     private int[] mergeArray(int[] array1, int[] array2){
         int firstArrayLength = array1.length;
@@ -57,5 +59,9 @@ public class MergeSorter implements Sorter {
 
 
         return mergeArray;
+    }
+    @Override
+    public String toString(){
+        return "Merge Sorter";
     }
 }

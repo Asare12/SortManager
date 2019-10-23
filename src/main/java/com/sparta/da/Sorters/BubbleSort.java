@@ -18,4 +18,8 @@ public class BubbleSort implements Sorter {
         }while (isSorted);
         return unsortedArray;
     }
+    @Override
+    public String toString(){
+        return "Bubble Sorter";
+    }
 }
