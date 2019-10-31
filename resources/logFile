@@ -1,0 +1,6 @@
+24-10-2019 11:20:46 TRACE [main] Starter - Logging initialised
+24-10-2019 11:20:46 TRACE [main] LoggingClass - Message set
+24-10-2019 11:20:46 DEBUG [main] LoggingClass - Message Printed - Welcome to Logging
+24-10-2019 11:22:07 TRACE [main] Starter - Logging initialised
+24-10-2019 11:22:07 TRACE [main] LoggingClass - Message set
+24-10-2019 11:22:07 DEBUG [main] LoggingClass - Message Printed - Welcome to Logging
