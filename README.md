@@ -2,11 +2,11 @@
 Java application which contains various sorting algorithms.
 
 ## Algorithms
-Bubblesort
-Quicksort
-Mergesort
-Bubblesort
-Binary Search Tree
+* Bubblesort
+* Quicksort
+* Mergesort
+* Bubblesort
+* Binary Search Tree
 
 ## Prerequisites
 ```
